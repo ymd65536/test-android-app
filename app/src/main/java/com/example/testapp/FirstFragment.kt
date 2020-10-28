@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
@@ -25,7 +26,9 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var tvFirst: TextView = view.findViewById<TextView>(R.id.textview_first)
+        //var tvFirst: TextView = view.findViewById<TextView>(R.id.textview_first)
+        var edittxt: EditText
+        edittxt = view.findViewById<EditText>(R.id.edit_text_value)
 
         view.findViewById<Button>(R.id.button_first).setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
@@ -33,7 +36,7 @@ class FirstFragment : Fragment() {
 
         view.findViewById<Button>(R.id.btn_test).setOnClickListener {
             view->
-            Snackbar.make(view, tvFirst.text.toString(), Snackbar.LENGTH_LONG)
+            Snackbar.make(view, edittxt.text.toString(), Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
