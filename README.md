@@ -71,3 +71,34 @@ Stringに実装されたインターフェイス
 ## SecondFragment.kt
 FirstFragmentから呼び出すファイル
 
+## EditText
+
+ユーザから文字を受け付けることのできるUI  
+何を入力するかとラベル名は必ずつけること
+
+
+## 警告文
+
+> HardCodedText  
+@stringで値を定義して管理しましょう。  
+(ソースコードに値を書かない)
+
+
+ > missing constraints in constraint layout  
+「水平方向に固定されてないから  
+画面内のどこに表示されるかちゃんと設定できてないよ」  
+ということらしい。めんどいので直訳はしません。  
+
+これをしないと、画面内のどこに要素を表示すれば良いのか
+端末側で判断がつかないようです。  
+
+縦方向(vertical)に1回  
+横方向(horizontal)に1回  
+最低でも片側ずつには固定する点をつけるようする。  
+
+> Missing accesibility Label  
+入力するためのヒントやLabelを付けましょう。  
+android:hintやandroid:LabelForが抜けていると起きる。  
+
+
+
